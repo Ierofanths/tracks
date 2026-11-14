@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Track",
+  "description": "The track.json that sits next to track.png (or track.jpg) in library/<id>/. Squares are counted from 0: column 0 is the left-most, row 0 the top-most.",
+  "type": "object",
+  "required": ["title", "author", "license"],
+  "properties": {
+    "title": { "type": "object", "required": ["en"], "properties": { "en": { "type": "string", "minLength": 1 }, "el": { "type": "string" } } },
+    "description": { "type": "object", "properties": { "en": { "type": "string" }, "el": { "type": "string" } } },
+    "author": { "type": "string", "minLength": 1, "description": "Your name, your school or your organisation." },
+    "license": { "enum": ["CC0-1.0", "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-NC-SA-4.0"] },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "robots": { "type": "array", "items": { "enum": ["tpbot-edu", "tpbot"] } },
+    "start": { "type": "object", "required": ["col", "row"], "properties": { "col": { "type": "integer", "minimum": 0 }, "row": { "type": "integer", "minimum": 0 }, "heading": { "enum": [0, 90, 180, 270], "description": "0 = up, 90 = right, 180 = down, 270 = left" } } },
+    "targets": { "type": "array", "items": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "minItems": 2, "maxItems": 2 } },
+    "traps": { "type": "array", "items": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "minItems": 2, "maxItems": 2 } }
+  }
+}

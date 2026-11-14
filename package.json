@@ -1,0 +1,13 @@
+{
+  "name": "tracks",
+  "private": true,
+  "type": "module",
+  "description": "Shared tracks (floor pictures) for the robot coding app",
+  "scripts": {
+    "check": "node scripts/build.mjs --check",
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

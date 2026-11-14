@@ -1,0 +1,45 @@
+{
+  "title": {
+    "el": "Το νησί του θησαυρού",
+    "en": "Treasure island"
+  },
+  "description": {
+    "el": "Φτάστε στο σεντούκι χωρίς να πέσετε στις παγίδες. Το ρομπότ ξεκινά κάτω αριστερά.",
+    "en": "Reach the chest without falling into the traps. The robot starts at the bottom left."
+  },
+  "author": "STEM Education",
+  "license": "CC0-1.0",
+  "tags": [
+    "target-and-trap",
+    "coding-basics"
+  ],
+  "robots": [
+    "tpbot-edu",
+    "tpbot"
+  ],
+  "start": {
+    "col": 1,
+    "row": 4,
+    "heading": 0
+  },
+  "targets": [
+    [
+      4,
+      1
+    ]
+  ],
+  "traps": [
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      1,
+      1
+    ]
+  ]
+}

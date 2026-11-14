@@ -1,0 +1,27 @@
+{
+  "title": {
+    "el": "Ακολούθηση γραμμής: οβάλ",
+    "en": "Line following: oval"
+  },
+  "description": {
+    "el": "Μια μαύρη γραμμή που περνά από το κέντρο των τετραγώνων. Το ρομπότ ξεκινά στο κάτω μεσαίο τετράγωνο και κοιτάζει δεξιά.",
+    "en": "A black line through the middle of the squares. The robot starts on the bottom middle square, facing right."
+  },
+  "author": "STEM Education",
+  "license": "CC0-1.0",
+  "tags": [
+    "line-following",
+    "sensors"
+  ],
+  "robots": [
+    "tpbot-edu",
+    "tpbot"
+  ],
+  "start": {
+    "col": 3,
+    "row": 4,
+    "heading": 90
+  },
+  "targets": [],
+  "traps": []
+}
