@@ -1,0 +1,31 @@
+{
+  "title": {
+    "el": "Από την ελιά στο λάδι",
+    "en": "From olive to oil"
+  },
+  "description": {
+    "el": "Ακολουθήστε τα εννέα στάδια παραγωγής ελαιολάδου, από τη συγκομιδή μέχρι την εμφιάλωση. Το ρομπότ ξεκινά στο ΑΡΧΗ και φτάνει στο ΤΕΛΟΣ.",
+    "en": "Follow the nine stages of olive-oil production, from harvest to bottling. The robot starts at START and ends at FINISH."
+  },
+  "author": "why.gr (Διερευνητική Μάθηση)",
+  "license": "TO-BE-CONFIRMED",
+  "tags": [
+    "story-sequence",
+    "science"
+  ],
+  "robots": [
+    "tpbot-edu",
+    "tpbot"
+  ],
+  "start": {
+    "col": 0,
+    "row": 4,
+    "heading": 90
+  },
+  "targets": [
+    [
+      1,
+      1
+    ]
+  ]
+}

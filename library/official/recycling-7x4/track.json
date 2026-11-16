@@ -1,0 +1,39 @@
+{
+  "title": {
+    "el": "Ανακυκλώνουμε",
+    "en": "Let's recycle"
+  },
+  "description": {
+    "el": "Πηγαίνετε τα ρομπότ στον σωστό κάδο: κίτρινος για χαρτί, κόκκινος για πλαστικά, μπλε για αλουμίνιο.",
+    "en": "Take the robot to the right bin: yellow for paper, red for plastic, blue for aluminium."
+  },
+  "author": "why.gr (Διερευνητική Μάθηση)",
+  "license": "TO-BE-CONFIRMED",
+  "tags": [
+    "target-and-trap",
+    "science"
+  ],
+  "robots": [
+    "tpbot-edu",
+    "tpbot"
+  ],
+  "start": {
+    "col": 3,
+    "row": 3,
+    "heading": 0
+  },
+  "targets": [
+    [
+      0,
+      3
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      6,
+      0
+    ]
+  ]
+}
