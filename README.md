@@ -4,8 +4,8 @@ Shared floor pictures ("tracks") for the robot coding app. Teachers and schools 
 
 Κοινές εικόνες δαπέδου («πίστες») για την εφαρμογή προγραμματισμού ρομπότ. Εκπαιδευτικοί και σχολεία μπορούν να προσθέσουν τις δικές τους· κάθε πίστα εμφανίζεται στη βιβλιοθήκη **Πίστες** της εφαρμογής και στη σελίδα της συλλογής.
 
-- Gallery · Συλλογή: `https://Ierofanths.github.io/tracks/`
-- The app · Η εφαρμογή: `https://Ierofanths.github.io/app/`
+- Gallery · Συλλογή: `https://robotrails.github.io/tracks/`
+- The app · Η εφαρμογή: `https://robotrails.github.io/app/`
 
 ## How it works · Πώς λειτουργεί
 
@@ -46,7 +46,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). In short: save your track from the app (
 
 ## For the maintainers · Για τους διαχειριστές
 
-- Official tracks go in `library/official/`. In Settings → Branches add a rule for `main` with **Require a pull request** and **Require review from Code Owners**; `.github/CODEIerofanthsS` already points `library/official/` at you. Even without that rule, the check fails a pull request from an outsider that touches `library/official/`.
+- Official tracks go in `library/official/`. In Settings → Branches add a rule for `main` with **Require a pull request** and **Require review from Code Owners**; `.github/CODEOWNERS` already points `library/official/` at you. Even without that rule, the check fails a pull request from an outsider that touches `library/official/`.
 - Settings → Pages → Source: **GitHub Actions** (once).
 - Check on your own computer: `npm ci` then `npm run check`; build the site into `_site/` with `npm run build`.
 - Pull requests are checked automatically (`scripts/build.mjs --check`); only merged tracks are published.
