@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Πίστες · Tracks</title>
+<meta name="description" content="Floor pictures (tracks) for the robot coding app, shared by teachers and schools.">
+<meta name="theme-color" content="#0071BC">
+<style>
+  @font-face { font-family: "Commissioner"; src: url(assets/commissioner.woff2) format("woff2"); font-weight: 400 800; font-display: swap; }
+  :root { --blue: #0071BC; --orange: #F15A24; --gold: #FBB03B; --sky: #0096EA; --charcoal: #6D6E71; --ink: #1A1A1A; --line: #DDDDDD; --alt: #F5F5F5; --accent: #B94418; --tint-blue: #E6F4FD; --tint-gold: #FEF4DE; --tint-orange: #FDEBE4; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Commissioner", "Segoe UI", Arial, sans-serif; font-size: 17px; line-height: 1.6; color: var(--ink); background: #fff; }
+  a { color: var(--blue); }
+  header { display: flex; align-items: center; gap: 16px; padding: 12px 24px; border-bottom: 1px solid var(--line); }
+  header img { height: 38px; width: auto; display: block; }
+  header nav { margin-left: auto; display: flex; align-items: center; gap: 18px; font-weight: 700; }
+  header nav a { text-decoration: none; }
+  .langbtn { font: inherit; font-weight: 700; padding: 6px 12px; background: #fff; border: 2px solid var(--charcoal); border-radius: 6px; cursor: pointer; }
+  main { max-width: 1100px; margin: 0 auto; padding: 28px 24px 56px; }
+  h1 { margin: 0 0 8px; font-size: 40px; line-height: 1.2; font-weight: 800; color: var(--blue); }
+  h2 { margin: 0 0 12px; font-size: 26px; line-height: 1.3; font-weight: 700; color: var(--blue); }
+  .lead { max-width: 760px; margin: 0 0 20px; color: var(--charcoal); font-size: 18px; }
+  .btn { display: inline-block; padding: 10px 20px; font: inherit; font-weight: 700; text-decoration: none; color: #fff; background: var(--orange); border: 0; border-radius: 6px; cursor: pointer; font-size: 18px; }
+  .btn.ghost { color: var(--blue); background: #fff; border: 2px solid var(--blue); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 16px; }
+  .chip { font: inherit; font-weight: 600; font-size: 15px; padding: 4px 14px; background: #fff; color: var(--ink); border: 1px solid var(--charcoal); border-radius: 999px; cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: #000; font-weight: 700; }
+  #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+  .card { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: #fff; }
+  .card img { display: block; width: 100%; height: 190px; object-fit: contain; background: var(--tint-blue); }
+  .card .body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+  .card h3 { margin: 0; font-size: 19px; line-height: 1.3; font-weight: 700; }
+  .card .meta { font-size: 14px; color: var(--charcoal); font-weight: 600; }
+  .card p { margin: 4px 0 8px; font-size: 15px; line-height: 1.5; }
+  .card .acts { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; }
+  .card .acts .btn { font-size: 15px; padding: 7px 14px; }
+  .badge { align-self: flex-start; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; background: var(--tint-blue); color: var(--blue); }
+  .badge.pub { background: var(--tint-gold); color: #7A4B00; }
+  .tags { font-size: 13px; color: var(--accent); font-weight: 700; }
+  #msg { color: var(--charcoal); }
+  section#add { margin-top: 48px; padding: 20px 24px 24px; background: var(--tint-blue); border-radius: 6px; }
+  section#add ol { list-style: none; counter-reset: s; margin: 0 0 18px; padding: 0; display: grid; gap: 12px; }
+  section#add li { counter-increment: s; display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start; }
+  section#add li::before { content: counter(s); width: 30px; height: 30px; line-height: 30px; text-align: center; border-radius: 50%; background: var(--gold); color: #000; font-weight: 800; }
+  footer { border-top: 1px solid var(--line); padding: 18px 24px; color: var(--charcoal); font-size: 14px; }
+  html[lang="el"] [data-l="en"], html[lang="en"] [data-l="el"] { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <a href="../"><img src="assets/stem-education-logo.png" alt="STEM education"></a>
+  <nav>
+    <a href="../" data-l="el">Αρχική</a><a href="../" data-l="en">Home</a>
+    <a href="../app/" data-l="el">Άνοιγμα εφαρμογής</a><a href="../app/" data-l="en">Open the app</a>
+    <button class="langbtn" id="lang" type="button">EN</button>
+  </nav>
+</header>
+<main>
+  <h1><span data-l="el">Πίστες</span><span data-l="en">Tracks</span></h1>
+  <p class="lead" data-l="el">Εικόνες δαπέδου για την εφαρμογή προγραμματισμού ρομπότ, που μοιράζονται εκπαιδευτικοί και σχολεία. Ανοίξτε μία στην εφαρμογή ή κατεβάστε την και εκτυπώστε την ως πατάκι.</p>
+  <p class="lead" data-l="en">Floor pictures for the robot coding app, shared by teachers and schools. Open one in the app, or download it and print it as a mat.</p>
+  <a class="btn ghost" href="#add" data-l="el">Προσθέστε τη δική σας πίστα</a><a class="btn ghost" href="#add" data-l="en">Add your own track</a>
+  <div class="chips" id="sources"></div>
+  <div class="chips" id="chips" style="margin-top:0"></div>
+  <div id="grid"></div>
+  <p id="msg"></p>
+
+  <section id="add">
+    <h2><span data-l="el">Προσθέστε τη δική σας πίστα</span><span data-l="en">Add your own track</span></h2>
+    <ol data-l="el">
+      <li><div>Φτιάξτε την εικόνα με τετράγωνα 200 × 200 px (έως 8 × 8 τετράγωνα). Ο οδηγός σχεδίασης εξηγεί πώς.</div></li>
+      <li><div>Ανοίξτε την εικόνα στην εφαρμογή, ορίστε αρχικό τετράγωνο, στόχο και παγίδες αν θέλετε, και πατήστε «Αποθήκευση της πίστας μου για κοινοποίηση». Θα κατεβούν δύο αρχεία: <b>track.jpg</b> και <b>track.json</b>.</div></li>
+      <li><div>Ανοίξτε το track.json σε οποιονδήποτε επεξεργαστή κειμένου και συμπληρώστε τίτλο, συγγραφέα και άδεια χρήσης.</div></li>
+      <li><div>Βάλτε τα δύο αρχεία σε έναν φάκελο με όνομα π.χ. <b>farm-8x6</b> (μικρά γράμματα, αριθμοί και παύλες) και ανεβάστε τον στο GitHub: <i>Add file → Upload files</i>.</div></li>
+      <li><div>Ένας αυτόματος έλεγχος σάς λέει αν χρειάζεται κάποια διόρθωση. Όταν η πίστα εγκριθεί, εμφανίζεται εδώ και στην εφαρμογή μέσα σε λίγα λεπτά.</div></li>
+    </ol>
+    <ol data-l="en">
+      <li><div>Make the picture with squares of 200 × 200 px (up to 8 × 8 squares). The design brief explains how.</div></li>
+      <li><div>Open the picture in the app, set the start square, target and traps if you like, and press “Save my track to share it”. Two files download: <b>track.jpg</b> and <b>track.json</b>.</div></li>
+      <li><div>Open track.json in any text editor and fill in the title, author and licence.</div></li>
+      <li><div>Put both files in a folder named, for example, <b>farm-8x6</b> (lowercase letters, numbers and dashes) and upload it to GitHub: <i>Add file → Upload files</i>.</div></li>
+      <li><div>An automatic check tells you if anything needs fixing. When the track is approved it appears here and in the app within a few minutes.</div></li>
+    </ol>
+    <a class="btn" id="upload" href="https://github.com/robotrails/tracks/upload/main/library/public" data-l="el">Ανέβασμα στο GitHub</a><a class="btn" href="https://github.com/robotrails/tracks/upload/main/library/public" data-l="en">Upload on GitHub</a>
+    <a class="btn ghost" href="https://github.com/robotrails/tracks/blob/main/CONTRIBUTING.md" data-l="el">Αναλυτικές οδηγίες</a><a class="btn ghost" href="https://github.com/robotrails/tracks/blob/main/CONTRIBUTING.md" data-l="en">Full instructions</a>
+    <a class="btn ghost" href="https://github.com/robotrails/tracks/blob/main/DESIGN-BRIEF.md" data-l="el">Οδηγός σχεδίασης</a><a class="btn ghost" href="https://github.com/robotrails/tracks/blob/main/DESIGN-BRIEF.md" data-l="en">Design brief</a>
+  </section>
+</main>
+<footer>
+  <span data-l="el">Κάθε πίστα έχει τη δική της άδεια χρήσης, που φαίνεται στην κάρτα της. Δεν συλλέγουμε προσωπικά δεδομένα.</span>
+  <span data-l="en">Every track has its own licence, shown on its card. We do not collect personal data.</span>
+</footer>
+<script>
+(() => {
+  const T = {
+    el: { open: 'Άνοιγμα στην εφαρμογή', dl: 'Λήψη της εικόνας', by: 'από', squares: 'τετράγωνα', all: 'Όλες', srcAll: 'Όλες οι πίστες', official: 'Επίσημες', public: 'Κοινότητας', err: 'Δεν φορτώθηκαν οι πίστες.', none: 'Δεν υπάρχουν ακόμη πίστες.',
+          tags: { 'line-following': 'ακολούθηση γραμμής', 'sensors': 'αισθητήρες', 'target-and-trap': 'στόχος και παγίδες', 'coding-basics': 'βασικά προγραμματισμού' } },
+    en: { open: 'Open in the app', dl: 'Download the picture', by: 'by', squares: 'squares', all: 'All', srcAll: 'All tracks', official: 'Official', public: 'Community', err: 'The tracks could not be loaded.', none: 'There are no tracks yet.', tags: {} }
+  };
+  let lang = (localStorage.getItem('tracks:lang') || ((navigator.language || '').startsWith('el') ? 'el' : 'en'));
+  let tracks = [], tag = '', src = '', loaded = false, failed = false;
+  const $ = (s) => document.querySelector(s);
+  const tx = (o, fb) => (o && (o[lang] || o.en || o.el)) || fb || '';
+  const tagName = (t) => (T[lang].tags[t]) || t.replace(/-/g, ' ');
+  function render() {
+    document.documentElement.lang = lang; $('#lang').textContent = lang === 'el' ? 'EN' : 'EL';
+    const srcs = $('#sources'); srcs.innerHTML = '';
+    if (new Set(tracks.map((t) => t.collection)).size > 1) [['', T[lang].srcAll], ['official', T[lang].official], ['public', T[lang].public]].forEach(([k, label]) => {
+      const b = document.createElement('button'); b.className = 'chip'; b.type = 'button'; b.textContent = label; b.setAttribute('aria-pressed', String(src === k));
+      b.addEventListener('click', () => { src = k; render(); }); srcs.appendChild(b);
+    });
+    const tagsAll = [...new Set(tracks.flatMap((t) => t.tags || []))].sort();
+    const chips = $('#chips'); chips.innerHTML = '';
+    if (tagsAll.length) [['', T[lang].all], ...tagsAll.map((t) => [t, tagName(t)])].forEach(([k, label]) => {
+      const b = document.createElement('button'); b.className = 'chip'; b.type = 'button'; b.textContent = label; b.setAttribute('aria-pressed', String(tag === k));
+      b.addEventListener('click', () => { tag = k; render(); }); chips.appendChild(b);
+    });
+    const grid = $('#grid'); grid.innerHTML = '';
+    tracks.filter((t) => (!src || t.collection === src) && (!tag || (t.tags || []).includes(tag))).forEach((t) => {
+      const c = document.createElement('article'); c.className = 'card';
+      const img = document.createElement('img'); img.src = t.thumb; img.alt = ''; img.loading = 'lazy';
+      const body = document.createElement('div'); body.className = 'body';
+      const bd = document.createElement('span'); bd.className = 'badge' + (t.collection === 'public' ? ' pub' : ''); bd.textContent = T[lang][t.collection === 'public' ? 'public' : 'official'];
+      const h = document.createElement('h3'); h.textContent = tx(t.title, t.id);
+      const m = document.createElement('div'); m.className = 'meta'; m.textContent = `${t.cols} × ${t.rows} ${T[lang].squares} · ${T[lang].by} ${t.author} · ${t.license}`;
+      const p = document.createElement('p'); p.textContent = tx(t.description, '');
+      const tg = document.createElement('div'); tg.className = 'tags'; tg.textContent = (t.tags || []).map(tagName).join(' · ');
+      const a = document.createElement('div'); a.className = 'acts';
+      const o = document.createElement('a'); o.className = 'btn'; o.textContent = T[lang].open; o.href = '../app/?track=' + encodeURIComponent(t.id);
+      const d = document.createElement('a'); d.className = 'btn ghost'; d.textContent = T[lang].dl; d.href = t.image; d.download = t.id + t.image.slice(t.image.lastIndexOf('.'));
+      a.append(o, d); body.append(bd, h, m, p, tg, a); c.append(img, body); grid.appendChild(c);
+    });
+    $('#msg').textContent = tracks.length ? '' : failed ? T[lang].err : loaded ? T[lang].none : '';
+  }
+  $('#lang').addEventListener('click', () => { lang = lang === 'el' ? 'en' : 'el'; localStorage.setItem('tracks:lang', lang); render(); });
+  fetch('index.json', { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((j) => { tracks = j.tracks || []; loaded = true; render(); })
+    .catch(() => { failed = true; render(); });
+  render();
+})();
+</script>
+</body>
+</html>
