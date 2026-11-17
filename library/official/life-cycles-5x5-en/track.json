@@ -1,0 +1,32 @@
+{
+  "title": {
+    "en": "Life cycles (English)",
+    "el": "Οι κύκλοι ζωής (αγγλικά)"
+  },
+  "description": {
+    "en": "Five life cycles in five rows: frog, butterfly, hen, apple and human. The robot starts at Start Here! and passes through each stage.",
+    "el": "Πέντε κύκλοι ζωής σε πέντε σειρές: βατράχου, πεταλούδας, κότας, μήλου και ανθρώπου. Το ρομπότ ξεκινά στο Start Here! και περνά από κάθε στάδιο."
+  },
+  "author": "STEM Education / why.gr",
+  "license": "CC0-1.0",
+  "tags": [
+    "story-sequence",
+    "science",
+    "english"
+  ],
+  "robots": [
+    "tpbot-edu",
+    "tpbot"
+  ],
+  "start": {
+    "col": 0,
+    "row": 0,
+    "heading": 90
+  },
+  "targets": [
+    [
+      4,
+      0
+    ]
+  ]
+}

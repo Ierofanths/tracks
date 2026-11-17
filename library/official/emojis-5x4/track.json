@@ -1,0 +1,25 @@
+{
+  "title": {
+    "en": "Emojis",
+    "el": "Τα emoji"
+  },
+  "description": {
+    "en": "Visit the emojis! The robot starts at the arrow in the top-left corner and moves from feeling to feeling.",
+    "el": "Επισκεφθείτε τα emoji! Το ρομπότ ξεκινά από το βέλος πάνω αριστερά και περνά από συναίσθημα σε συναίσθημα."
+  },
+  "author": "STEM Education / why.gr",
+  "license": "CC0-1.0",
+  "tags": [
+    "free-exploration",
+    "emotions"
+  ],
+  "robots": [
+    "tpbot-edu",
+    "tpbot"
+  ],
+  "start": {
+    "col": 0,
+    "row": 0,
+    "heading": 90
+  }
+}

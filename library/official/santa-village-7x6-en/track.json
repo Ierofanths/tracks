@@ -1,0 +1,26 @@
+{
+  "title": {
+    "en": "Santa's village (English)",
+    "el": "Το χωριό του Αϊ Βασίλη (αγγλικά)"
+  },
+  "description": {
+    "en": "Help the robot travel from the start sign through Santa's village, his workshop and the sleigh.",
+    "el": "Βοηθήστε το ρομπότ να ταξιδέψει από την πινακίδα Start μέσα από το χωριό του Αϊ Βασίλη, το εργαστήριό του και το έλκηθρο."
+  },
+  "author": "STEM Education / why.gr",
+  "license": "CC0-1.0",
+  "tags": [
+    "story-sequence",
+    "christmas",
+    "english"
+  ],
+  "robots": [
+    "tpbot-edu",
+    "tpbot"
+  ],
+  "start": {
+    "col": 0,
+    "row": 5,
+    "heading": 90
+  }
+}
