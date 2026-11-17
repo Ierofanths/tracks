@@ -1,0 +1,26 @@
+{
+  "title": {
+    "en": "Children of the world (English)",
+    "el": "Τα παιδιά του κόσμου (αγγλικά)"
+  },
+  "description": {
+    "en": "Travel around the world! The robot starts at the globe and visits the children of different countries.",
+    "el": "Ταξιδέψτε σε όλο τον κόσμο! Το ρομπότ ξεκινά από την υδρόγειο και επισκέπτεται τα παιδιά διαφορετικών χωρών."
+  },
+  "author": "STEM Education / why.gr",
+  "license": "CC0-1.0",
+  "tags": [
+    "geography",
+    "free-exploration",
+    "english"
+  ],
+  "robots": [
+    "tpbot-edu",
+    "tpbot"
+  ],
+  "start": {
+    "col": 0,
+    "row": 0,
+    "heading": 90
+  }
+}
